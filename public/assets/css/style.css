@@ -24,7 +24,7 @@ h1 {
 	margin: auto;
 	background-color: #fff;
 	box-shadow: 0 0 10px #aaa;
-	min-height: 800px;
+	min-height: 1000px;
 	margin-bottom: 150px;
 }
 
@@ -61,6 +61,11 @@ h1 {
 	color: #999;
 	background-color: #eee;
 	margin: 10px;
+}
+
+.customer {
+	font-size: 14px;
+	display: none;
 }
 
 h3 {
@@ -105,4 +110,30 @@ footer {
 	border-top: 8px solid #4aaaa5;
 	opacity: 0.7;
 	z-index: 5;
+}
+
+@media only screen and (max-width: 980px) {
+	#burgerholder {
+		float: none;
+		width: 100%;
+		min-height: 100px;
+		color: #999;
+		background-color: #eee;
+		margin: 10px;
+		padding-bottom: 10px;
+	}
+
+	#burgergone {
+		float: none;
+		width: 100%;
+		min-height: 100px;
+		color: #999;
+		background-color: #eee;
+		margin: 10px;
+		padding-bottom: 10px;
+	}
+
+	button {
+		display: inline-block;
+	}
 }

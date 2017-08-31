@@ -1,7 +1,7 @@
 <h1>Eat-Da-Burger!</h1>
 
 <div id="container">
-	<p><a href="https://github.com/akirasunny/a13-burger-sequelize">-- Click here to visit GitHub repository --</a></p>
+	<p><a href="https://github.com/akirasunny/a13-burger-sequelize" target="_blank">-- Click here to visit GitHub repository --</a></p>
 
 	<div id="addburger">
 		<div id="burger">
@@ -24,7 +24,8 @@
 					{{this.burger_name}}
 					<form action="/{{this.id}}?_method=PUT" method="POST">
 					<input type="hidden" name="boolean" value="true">
-					<br><button type="submit">Devour it</button>
+					<br><button type="button" class="predevour" id="devour{{this.id}}">Tell me who you are</button>
+					<input type="text" name="customer" class="customer" id="customer{{this.id}}" placeholder="Customer name">
 					</form>
 				</li>
 			</ul>
@@ -38,7 +39,7 @@
 			{{#if this.devoured}}
 			<ul>
 				<li>
-					{{this.burger_name}}
+					{{this.burger_name}} (Devoured by {{this.customer.name}})
 					<br><form action="/{{this.id}}?_method=PUT" method="POST">
 					<input type="hidden" name="boolean" value="false">
 					<button type="submit">Have it again</button>
