@@ -20,7 +20,7 @@ app.set("view engine", "handlebars");
 
 require("./routes/burgers_controller")(app);
 
-db.sequelize.sync({force: true}).then(function() {
+db.sequelize.sync().then(function() {
 	app.listen(port, function() {
 		console.log("Connected to port " + port);
 	});
